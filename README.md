@@ -12,7 +12,7 @@
  
 # Timeline
 
- - Officially started course January 19th, 2016
+ - Officially started course January 19th, 2018
  - Expected to finish in late February
  
 # Notes
