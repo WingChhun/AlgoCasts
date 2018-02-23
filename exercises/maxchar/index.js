@@ -5,40 +5,26 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-let min;
+
 
 function maxChar(str) {
 
-    //variables
-    const charMap = {}; //empty object
     let max = 0;
-    let maxChar = '';
-
+    const newArr = {};
+    str = str.split('');
+    //build an object that counts number of characters in the string
     for (let char of str) {
-        if (charMap[char]) {
-
-            charMap[char]++;
+        if (!(newArr[char])) {
+            newArr[char] == 1;
         } else {
-            charMap[char] = 1;
+            newArr[char]++;
         }
-    } // end for loop
-    console.log(charMap);
+    } //end for loop
+    for(let value in newArr)
+    {
 
-    //Now need to iterate through object charMpa, find max value
-
-    for (let char in charMap) {
-        if (charMap[char] > max) {
-            max = charMap[char];
-            maxChar = char;
-        }
     }
 
-    //TEST OUTPUT
-    console.log(max);
-    console.log(maxChar);
-    //RETURN MOST COMMON CHARACTER
-    return maxChar;
 }
 
 module.exports = maxChar;
-return min;

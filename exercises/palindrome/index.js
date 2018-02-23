@@ -9,6 +9,25 @@
 
 function palindrome(str) {
 
+let reversedStr = str.split('').reduce((reversedStr,char)=>
+{
+return char+reversedStr;
+},'');
+
+if(reversedStr === str)
+{
+    return true;
+}
+else
+{
+    return false;
+}
+
+}
+
+module.exports = palindrome;
+
+/*
     //ES helper classes split and reduce
     let strReversed = str.split('').reduce((reversed, char) => {
         return char + reversed;
@@ -21,6 +40,7 @@ function palindrome(str) {
     /*
     Solution using a lot of Javascript helper functions
     */
+   /*
     let strReversed2 = str.split('').reverse().join('');
 
 if (str == strReversed2) {
@@ -42,6 +62,4 @@ if (str == strReversed2) {
         return false;
     }
 
-}
-
-module.exports = palindrome;
+    */

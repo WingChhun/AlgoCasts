@@ -8,15 +8,18 @@
 
 
 function reverse(str) {
-    var reversed = "";
-    return str.split('').reduce((reversed, character) => {
-        return character + reversed;
+
+
+    let reduced = str.split('').reduce((reversedStr, character) => {
+        return character + reversedStr;
     }, '');
+    
+    return reduced;
 
 }
 module.exports = reverse;
 
-
+//helper heavy solution
 /*
 function reverse(str) {
 
@@ -24,4 +27,15 @@ function reverse(str) {
     return arr.reverse().join('');
 }
 
+*/
+//Solid solution
+/*
+    //Create array, ful of array of characters from the string
+    let reversed="";
+    str = str.split('');
+    for(let value of str)
+    {
+        reversed = value + reversed;
+    }
+    return reversed;
 */

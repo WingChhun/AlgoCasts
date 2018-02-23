@@ -33,6 +33,7 @@ function steps(n, row = 0, stair = '') {
 
 module.exports = steps;
 
+//Solve as if 2D array
 // function steps(n) {
 //   for (let row = 0; row < n; row++) {
 //     let stair = '';

@@ -9,6 +9,8 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
+//Convert number to string
+//Make string into array, reverse and join
   const reversed = n
     .toString()
     .split('')

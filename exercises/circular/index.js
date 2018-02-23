@@ -12,6 +12,22 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {
+
+    let slow = list.getFirst();
+    let fast = list.getFirst();
+
+    //If these two every equal one another this is 
+
+    while (fast.next && fast.next.next) {
+        slow = slow.next;
+        fast = fast.next.next; //move two nodes
+        //are these two looking at same node?
+        if (slow === fast) {
+            return true;
+        }
+    }
+    return false;
+}
 
 module.exports = circular;
